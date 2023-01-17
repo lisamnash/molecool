@@ -114,3 +114,6 @@ ENV/
 # temporary data files
 *.in
 *.out
+
+#DS Store
+.DS_Store
