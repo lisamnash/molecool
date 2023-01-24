@@ -199,6 +199,32 @@ def build_bond_list(coordinates, max_bond=1.5, min_bond=0):
 
     return bonds
 
+
+def calculate_distance(rA, rB):
+    """Calculate the distance between two points.
+
+    Parameters
+    ----------
+    rA, rB : np.ndarray
+        The coordinates of each point.
+
+    Returns
+    -------
+    distance : float
+        The distance between the two points.
+    
+    Examples
+    --------
+    >>> r1 = np.array([0, 0, 0])
+    >>> r2 = np.array([0, 0.1, 0])
+    >>> calculate_distance(r1, r2)
+    0.1
+    """
+    disp_vec = (rA-rB)
+    distance = np.linalg.norm(disp_vec)
+
+    return distance 
+
 atom_colors = {
     'H': 'white',
     'C': '#D3D3D3',
