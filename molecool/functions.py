@@ -3,7 +3,7 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
-from mpl_toolkits.mplot3d import Axes3D
+from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
 
 
 def canvas(with_attribution=True):
@@ -54,13 +54,6 @@ def zen(with_attribution=True):
         quote += "\n\tTim Peters"
 
     return quote
-
-
-def calculate_distance(rA, rB):
-    # This function calculates the distance between two points given as numpy arrays.
-    d = rA - rB
-    dist = np.linalg.norm(d)
-    return dist
 
 
 def open_pdb(file_location):
