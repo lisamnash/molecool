@@ -61,6 +61,26 @@ def calculate_distance(rA, rB):
     return dist
 
 def open_pdb(file_location):
+
+    """Open pdb file describing a molecule and return lists of the symbols and coordinates
+
+    The pdb file must specify the atom elements in the last column, and follow
+    the conventions outlined in the PDB format specification.
+
+    Parameters
+    ----------
+    file_location : string
+        The location of the pdb file to read in
+
+    Returns
+    -------
+    symbols : list (of strings)
+        The atomic symbols in the pdb file
+    
+    coords: np.ndarray (floats)
+        The coordinates in the pdb file
+
+    """
     
     with open(file_location) as f:
         data = f.readlines()
