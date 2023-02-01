@@ -5,7 +5,7 @@ This module is for functions that perform measurements.
 """
 
 
-def calculate_distance(rA, rB):
+def calculate_distance(rA: np.ndarray, rB: np.ndarray) -> float:
     """Calculate the distance between two points.
 
     Parameters
